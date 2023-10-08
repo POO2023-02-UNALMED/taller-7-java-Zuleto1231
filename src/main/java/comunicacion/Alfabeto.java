@@ -4,7 +4,7 @@ package comunicacion;
 
 
 public class Alfabeto extends Pictograma{
-	private String[] letras= new String[10];
+	private String[] letras= new String[100];
 	private String interpretacion;
 	
 	
