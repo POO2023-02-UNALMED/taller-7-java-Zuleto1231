@@ -31,7 +31,14 @@ public class Tesis extends Escrito {
 	}
 	
 	public String toString() {
-		return this.resumen() + "\n" + this.idea + "\n" + this.argumentos.length + "\n" + this.conclusion + "\n" + this.referencias;
+		int contador=0;
+		for (int i =0;i< this.argumentos.length;i++) {
+			if (this.argumentos[i] != null) {
+				contador+=1;
+			}}
+
+		
+		return this.resumen() + "\n" + this.idea + "\n" + contador + "\n" + this.conclusion + "\n" + this.referencias;
 	}
 	
 	

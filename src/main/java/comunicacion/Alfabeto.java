@@ -17,8 +17,15 @@ public class Alfabeto extends Pictograma{
 	
 	
 	public int  cantidadLetras() {
-		return this.letras.length;
+		int contador=0;
+		for (int i =0;i< this.letras.length;i++) {
+			if (this.letras[i] != null) {
+				contador+=1;
+			}
+		}
+		return contador;
 	}
+	
 	
 	public String interpretacion() {
 		return this.interpretacion;
@@ -28,12 +35,16 @@ public class Alfabeto extends Pictograma{
 	public String toString() {
 		String todasLasLetras="";
 		for (int i=0; i< this.letras.length; i++) {
+			if (this.letras[i]!=null) {
 			todasLasLetras+=this.letras[i]+", ";
+			}
 		}
 		return todasLasLetras;
 		
 	}
 
+	
+//	Getters y setters
 	public String[] getLetras() {
 		return letras;
 	}
