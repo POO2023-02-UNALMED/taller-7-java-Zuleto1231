@@ -4,13 +4,13 @@ package comunicacion;
 
 
 public class Alfabeto extends Pictograma{
-	private String[] letras= new String[100];
+	private static String[] letras;
 	private String interpretacion;
 	
 	
 	public Alfabeto(String origen, String[] letras, String interpretacion) {
 		super(origen);
-		this.letras=letras;
+		Alfabeto.letras=letras;
 		this.interpretacion=interpretacion;
 	}
 	
@@ -18,8 +18,8 @@ public class Alfabeto extends Pictograma{
 	
 	public int  cantidadLetras() {
 		int contador=0;
-		for (int i =0;i< this.letras.length;i++) {
-			if (this.letras[i] != null) {
+		for (int i =0;i< Alfabeto.letras.length;i++) {
+			if (Alfabeto.letras[i] != null) {
 				contador+=1;
 			}
 		}
@@ -34,12 +34,14 @@ public class Alfabeto extends Pictograma{
 	
 	public String toString() {
 		String todasLasLetras="";
-		for (int i=0; i< this.letras.length; i++) {
-			if (this.letras[i]!=null) {
-			todasLasLetras+=this.letras[i]+", ";
+		
+		for (int i=0; i< Alfabeto.letras.length; i++) {
+			if (Alfabeto.letras[i]!=null) {
+			todasLasLetras+=Alfabeto.letras[i]+", ";
 			}
 		}
-		return todasLasLetras;
+		String ultimaComa=todasLasLetras.substring(0,todasLasLetras.length()-2);
+		return ultimaComa;
 		
 	}
 
