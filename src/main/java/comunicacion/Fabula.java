@@ -10,7 +10,7 @@ public class Fabula extends Escrito {
 	}
 
 	public  int palabrasTotales(int palabrasPagina) {
-		return this.getPaginas() * palabrasPagina * 1;
+		return  this.getPaginas() *  palabrasPagina * 1;
 		
 	}
 	
@@ -19,7 +19,7 @@ public class Fabula extends Escrito {
 		
 	}
 	public String toString() {
-		return this.resumen() + "\n"+this.interpretacion;
+		return this.resumen() + "\n"+this.ensenanza;
 		
 	}
 	
